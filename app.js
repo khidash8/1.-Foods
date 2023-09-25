@@ -1,6 +1,17 @@
 //? Get all the icons
 const icons = document.querySelectorAll(".section-1-icons i");
 
+//? get the menu element
+const menuToggler = document.querySelector(".menu");
+
+//? Event listners
+menuToggler.addEventListener("click", () => {
+  let togglableElements = document.querySelectorAll(".togglables");
+  togglableElements.forEach((items) => {
+    items.classList.toggle("change");
+  });
+});
+
 let i = 1;
 
 setInterval(() => {
